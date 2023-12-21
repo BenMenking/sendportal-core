@@ -89,7 +89,7 @@
                                         </a>
                                     @endif
 
-                                    @if ($campaign->draft)
+                                    @if ($campaign->draft || $campaign->getSentAtribute())
                                         <div class="dropdown-divider"></div>
                                         <a href="{{ route('sendportal.campaigns.destroy.confirm', $campaign->id) }}"
                                            class="dropdown-item">
